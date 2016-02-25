@@ -6,7 +6,7 @@ import java.util.Base64;
 
 public class FriendDataDecoder {
 
-	public ArrayList<String []> cheeruplines;
+	public ArrayList<String []> quotas;
 	public ArrayList<String> questions;
 	public ArrayList<String []> scienceTest;
 	public ArrayList<String []> puzzles;
@@ -20,7 +20,7 @@ public class FriendDataDecoder {
 		// splits with "#"
 		String[] words = coded.split("#");
 
-		cheeruplines = new ArrayList<String []>();
+		quotas = new ArrayList<String []>();
 		questions = new ArrayList<String>();
 		scienceTest = new ArrayList<String []>();
 		puzzles = new ArrayList<String []>();
@@ -29,7 +29,7 @@ public class FriendDataDecoder {
 			// Stupid but works
 			if (i % 4 == 0) {
 				int indexOfLastDot = words[i].lastIndexOf('.');
-				cheeruplines.add(new String [] {words[i].substring(1, indexOfLastDot),words[i].substring(indexOfLastDot+1).trim()});
+				quotas.add(new String [] {words[i].substring(1, indexOfLastDot),words[i].substring(indexOfLastDot+1).trim()});
 			} else if (i % 4 == 1) {
 				questions.add(words[i].substring(1, words[i].length()));
 			} else if (i % 4 == 2) {

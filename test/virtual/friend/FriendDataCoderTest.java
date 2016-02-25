@@ -6,36 +6,27 @@ import java.nio.file.Paths;
 import java.util.Base64;
 import java.util.List;
 
-import org.junit.Before;
+import org.junit.Assert;
 import org.junit.Test;
 
-import junit.framework.Assert;
 
 public class FriendDataCoderTest {
 
-	private FriendDataDecoder friendDataCoder;
-	
-	
-	
-	@Before
-	public void before(){
-		friendDataCoder = new FriendDataDecoder();
-	}
 	
 	public String dataCoder() throws IOException {
 		
-		List<String> cheeruplines = Files.readAllLines(Paths.get("F:\\BrassWillow\\PST\\PSD\\GIT\\team_x\\team_x\\exampleData\\cheeruplines.txt"));
-		List<String> unstucklines = Files.readAllLines(Paths.get("F:\\BrassWillow\\PST\\PSD\\GIT\\team_x\\team_x\\exampleData\\unstucklines.txt"));
+		List<String> quotas = Files.readAllLines(Paths.get("F:\\BrassWillow\\PST\\PSD\\GIT\\team_x\\team_x\\exampleData\\quotas.txt"));
 		List<String> questions = Files.readAllLines(Paths.get("F:\\BrassWillow\\PST\\PSD\\GIT\\team_x\\team_x\\exampleData\\questions.txt"));
+		List<String> sciencequestions = Files.readAllLines(Paths.get("F:\\BrassWillow\\PST\\PSD\\GIT\\team_x\\team_x\\exampleData\\sciencequestions.txt"));
 		List<String> puzzles = Files.readAllLines(Paths.get("F:\\BrassWillow\\PST\\PSD\\GIT\\team_x\\team_x\\exampleData\\puzzles.txt"));
 		
 		
 		String resultBeforeCoding = "";
 
-		for (int i = 0; i < cheeruplines.size(); i++) {
-			resultBeforeCoding = resultBeforeCoding + "C" + cheeruplines.get(i) + "#" + 
-					"U" + unstucklines.get(i) + "#" +
-					"Q" + questions.get(i)+ "#" +
+		for (int i = 0; i < quotas.size(); i++) {
+			resultBeforeCoding = resultBeforeCoding + "C" + quotas.get(i) + "#" + 
+					"A" + questions.get(i) + "#" +
+					"S" + sciencequestions.get(i)+ "#" +
 					"P" + puzzles.get(i) + "#";
 		}
 
@@ -49,8 +40,8 @@ public class FriendDataCoderTest {
 		FriendDataDecoder friendDataCoder = new FriendDataDecoder();
 		friendDataCoder.getData(codedData);
 		
-		Assert.assertEquals("Just think how happy you would be if you lost everything you have right now, and then got it back again", friendDataCoder.cheeruplines.get(0)[0]);
-		Assert.assertEquals("Frances Rodman", friendDataCoder.cheeruplines.get(0)[1]);
+		Assert.assertEquals("Just think how happy you would be if you lost everything you have right now, and then got it back again", friendDataCoder.quotas.get(0)[0]);
+		Assert.assertEquals("Frances Rodman", friendDataCoder.quotas.get(0)[1]);
 		Assert.assertEquals("What would your friend do?", friendDataCoder.questions.get(0));
 		Assert.assertEquals("Brass gets discoloured in air because of the presence of which of the following gases in air?", friendDataCoder.scienceTest.get(0)[0]);
 		Assert.assertEquals("Oxygen", friendDataCoder.scienceTest.get(0)[1]);

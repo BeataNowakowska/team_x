@@ -32,7 +32,7 @@ public class FriendRunner {
 		basicFunctionality.setData(data.questions);
 		
 		QuotesPrinter quotesPrinter = new QuotesPrinter(console);
-		quotesPrinter.setDataArrays(data.cheeruplines);
+		quotesPrinter.setDataArrays(data.quotas);
 		
 		ScienceTestPrinter scienceTestPrinter = new ScienceTestPrinter(console);
 		scienceTestPrinter.setDataArrays(data.scienceTest);
