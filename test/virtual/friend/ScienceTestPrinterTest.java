@@ -43,7 +43,7 @@ public class ScienceTestPrinterTest {
 	}
 	
 	@Test
-	public void userDontKnowTheAnswer(){
+	public void userDoesntKnowTheAnswer(){
 		//given
 		data.add(new String [] {"Q","A1","A2","A3","2"});
 		dataChooser.setDataArrays(data);
@@ -55,7 +55,7 @@ public class ScienceTestPrinterTest {
 	}
 	
 	@Test
-	public void userKnowTheAnswer(){
+	public void userKnowsTheAnswer(){
 		//given
 		data.add(new String [] {"Q","A1","A2","A3","2"});
 		dataChooser.setDataArrays(data);

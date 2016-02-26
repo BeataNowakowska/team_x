@@ -9,7 +9,7 @@
             "e - excersize your brain,\n"+
             "p - for puzzles,\n"+
             "s - for science questions,\n"+
-            "h - dispay this help,\n"+
+            "h - display this help,\n"+
             "q - if you want me to leave.\n"+
             "And press Enter\n";
 

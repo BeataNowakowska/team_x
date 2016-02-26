@@ -61,7 +61,6 @@ public class FriendUITest {
 		// given
 		systemConsole.addUserActions(new String[] { "c", "q" });
 		// when
-		
 		friend.run();
 		// then
 		Assert.assertEquals(quotasArrayList.get(0)[0] + "\n" + quotasArrayList.get(0)[1] , systemConsole.getProgramResponseAtt(1));

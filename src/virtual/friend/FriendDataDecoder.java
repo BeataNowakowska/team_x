@@ -6,12 +6,12 @@ import java.util.Base64;
 
 public class FriendDataDecoder {
 
-	public ArrayList<String []> quotas;
+	public ArrayList<String []> quotes;
 	public ArrayList<String> questions;
 	public ArrayList<String []> scienceTest;
 	public ArrayList<String []> puzzles;
 	
-	//Geds data from encoded in base 64 string into data structure
+	//Gets data from encoded in base 64 string into data structure
 	public void getData(String codedData) {
 		byte [] codedBytes = Base64.getDecoder().decode(codedData);
 
@@ -20,7 +20,7 @@ public class FriendDataDecoder {
 		// splits with "#"
 		String[] words = coded.split("#");
 
-		quotas = new ArrayList<String []>();
+		quotes = new ArrayList<String []>();
 		questions = new ArrayList<String>();
 		scienceTest = new ArrayList<String []>();
 		puzzles = new ArrayList<String []>();
@@ -29,7 +29,7 @@ public class FriendDataDecoder {
 			// Stupid but works
 			if (i % 4 == 0) {
 				int indexOfLastDot = words[i].lastIndexOf('.');
-				quotas.add(new String [] {words[i].substring(1, indexOfLastDot),words[i].substring(indexOfLastDot+1).trim()});
+				quotes.add(new String [] {words[i].substring(1, indexOfLastDot),words[i].substring(indexOfLastDot+1).trim()});
 			} else if (i % 4 == 1) {
 				questions.add(words[i].substring(1, words[i].length()));
 			} else if (i % 4 == 2) {

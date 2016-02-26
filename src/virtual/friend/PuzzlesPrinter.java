@@ -4,7 +4,7 @@ import java.util.ArrayList;
 
 public class PuzzlesPrinter extends FunctionalityRunner{
 
-	public static String GIVE_ANSER_QUESTION = "Do you want to know the answer? Yes/Not yet";
+	public static String GIVE_ANSWER_QUESTION = "Do you want to know the answer? Yes/Not yet";
 	public static String YES = "Yes";
 	public static String TOUGH = "You're tough, that's good."; 
 	
@@ -23,7 +23,7 @@ public class PuzzlesPrinter extends FunctionalityRunner{
 		String puzzle [] = arrayData.get(getNextElementIndex());
 		
 		console.write(puzzle[0]);
-		console.write(GIVE_ANSER_QUESTION);
+		console.write(GIVE_ANSWER_QUESTION);
 		if(YES.equals(console.readline())){
 			console.write(puzzle[1]);
 		} else {

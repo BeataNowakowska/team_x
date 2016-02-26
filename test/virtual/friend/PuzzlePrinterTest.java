@@ -43,7 +43,7 @@ public class PuzzlePrinterTest {
 	}
 	
 	@Test
-	public void userWantToKnowTheAnswer(){
+	public void userWantsToKnowTheAnswer(){
 		//given
 		data.add(new String [] {"P","A"});
 		dataChooser.setDataArrays(data);
@@ -51,12 +51,12 @@ public class PuzzlePrinterTest {
 		//when
 		dataChooser.next();
 		//then
-		Assert.assertEquals(PuzzlesPrinter.GIVE_ANSER_QUESTION, stub.getProgramResponseAtt(1));
+		Assert.assertEquals(PuzzlesPrinter.GIVE_ANSWER_QUESTION, stub.getProgramResponseAtt(1));
 		Assert.assertEquals("A",stub.getProgramResponseAtt(2));
 	}
 	
 	@Test
-	public void userDontWantToKnowTheAnswer(){
+	public void userDoesntWantToKnowTheAnswer(){
 		//given
 		data.add(new String [] {"P","A"});
 		dataChooser.setDataArrays(data);

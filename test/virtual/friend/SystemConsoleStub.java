@@ -32,9 +32,9 @@ public class SystemConsoleStub extends ConsoleBox
 
         public String readline()
         {
-            String firstNotReadedUserAction = userActions.get(0);
+            String firstNotReadUserAction = userActions.get(0);
             userActions.remove(0);
-            return firstNotReadedUserAction;
+            return firstNotReadUserAction;
         }
 
         public int programResporseCount()
