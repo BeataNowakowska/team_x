@@ -1,9 +1,13 @@
 1) Naprawic blad zwiazany z nowymi danymi NewData.txt
 Typ: Bug
 Story points: 3
+Piotrek, Kuba - defekt fix
 
 2) Nowa gra - zgadywanie liczby
 Typ: Story
 Story points: 5
 ac1 - ustalony przedzial 0 - 100
 ac2 - komputer podpowiada przy nietrafionych liczbach
+
+Krzysiek - framework
+Jacek, Rafal - Gra
