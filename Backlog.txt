@@ -1,0 +1,5 @@
+1) Naprawic blad zwiazany z nowymi danymi NewData.txt
+2) Naprawic nieprzechodzace testy zwiazane z puzzles
+3) Nowa gra - zgadywanie liczby
+4) Historia gier + ranking 
+5) Nowa gra - tlumaczenia 
