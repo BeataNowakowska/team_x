@@ -14,36 +14,10 @@ public class GuessNumberPrinter extends FunctionalityRunner {
         super(box);
     }
 
-    public static void main(String args[]) {
-        Random random = new Random();
-        int number = random.nextInt(100);
-        ConsoleBox box = new ConsoleBox();
-        box.write("Pomyslalem jakos liczbe z zakresu 0 - 100.");
-        while(true) {
-            box.write("Jaka liczbe pomyslalem?");
-            String answer = box.readline();
-
-            if ("q".equals(answer)) {
-                break;
-            }
-
-            int guessedNumber = Integer.parseInt(answer);
-
-            if (number == guessedNumber) {
-                box.write("Zgadles pomyslalme liczbe " + number);
-                break;
-            } else if (number > guessedNumber) {
-                box.write("Podales zbyt mala liczbe");
-            } else {
-                box.write("Podales zbyt duza liczbe");
-            }
-        }
-    }
-
     @Override
     public void next() {
-        Random random = new Random();
-        int number = random.nextInt(100);
+
+        int number = generateRandomNumber();
 
         console.write("Pomyslalem jakos liczbe z zakresu 0 - 100.");
 
@@ -67,4 +41,11 @@ public class GuessNumberPrinter extends FunctionalityRunner {
             }
         }
     }
+
+    protected int generateRandomNumber(){
+        Random random = new Random();
+        return random.nextInt(100);
+    }
+
+
 }
