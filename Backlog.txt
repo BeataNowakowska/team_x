@@ -1,0 +1,26 @@
+1) Naprawic blad zwiazany z nowymi danymi NewData.txt
+Typ: Bug
+Story points: 3
+
+2) Nowa gra - zgadywanie liczby
+Typ: Story
+Story points: 5
+ac1 - ustalony przedzial 0 - 100
+ac2 - komputer podpowiada przy nietrafionych liczbach
+
+3) Naprawic nieprzechodzace testy zwiazane z puzzles
+Typ: Bug
+Story points: 1
+
+4) Rozszerzenie przedzialu do dowolnej liczby
+Typ: Story
+Story points: 
+
+
+4) Historia gier + ranking 
+Typ: Story 
+Story points:
+
+5) Nowa gra - tlumaczenia 
+Typ: Story
+Story points:
