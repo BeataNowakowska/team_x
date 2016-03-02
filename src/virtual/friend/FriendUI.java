@@ -9,6 +9,7 @@ package virtual.friend;
             "e - excersize your brain,\n"+
             "p - for puzzles,\n"+
             "s - for science questions,\n"+
+            "n - guess number\n"+
             "h - display this help,\n"+
             "q - if you want me to leave.\n"+
             "And press Enter\n";
@@ -24,14 +25,16 @@ package virtual.friend;
         QuotesPrinter quotesPrinter;
         ScienceTestPrinter scienceTestPrinter;
         PuzzlesPrinter puzzlesPrinter;
-        
-        public FriendUI(ConsoleBox console, QuestionsPrinter askMeSomethingChooser, QuotesPrinter quotesPrinter, ScienceTestPrinter scienceTestPrinter, PuzzlesPrinter puzzlesPrinter)
+        GuessNumberPrinter guessNumberPrinter;
+
+        public FriendUI(ConsoleBox console, QuestionsPrinter askMeSomethingChooser, QuotesPrinter quotesPrinter, ScienceTestPrinter scienceTestPrinter, PuzzlesPrinter puzzlesPrinter, GuessNumberPrinter guessNumberPrinter)
         {
             this.console = console;
             this.quotesPrinter = quotesPrinter;
             this.questionPrinter = askMeSomethingChooser;
             this.scienceTestPrinter = scienceTestPrinter;
             this.puzzlesPrinter = puzzlesPrinter;
+            this.guessNumberPrinter = guessNumberPrinter;
         }
 
         public void run()
@@ -58,6 +61,9 @@ package virtual.friend;
                         break;
                     case "e":
                         console.write(NOT_IMPLEMENTED_YET);
+                        break;
+                    case "n":
+                        guessNumberPrinter.next();
                         break;
                     case "h":
                         console.write(HELP);

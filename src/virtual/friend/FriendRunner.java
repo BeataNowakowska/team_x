@@ -39,8 +39,10 @@ public class FriendRunner {
 		
 		PuzzlesPrinter puzzlesPrinter = new PuzzlesPrinter(console);
 		puzzlesPrinter.setDataArrays(data.puzzles);
-		
-		FriendUI friend = new FriendUI(new ConsoleBox(), basicFunctionality, quotesPrinter, scienceTestPrinter, puzzlesPrinter);
+
+		GuessNumberPrinter guessNumberPrinter = new GuessNumberPrinter(console);
+
+		FriendUI friend = new FriendUI(new ConsoleBox(), basicFunctionality, quotesPrinter, scienceTestPrinter, puzzlesPrinter, guessNumberPrinter);
 		
 		friend.run();
 	}
