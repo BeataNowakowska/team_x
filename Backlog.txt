@@ -12,15 +12,31 @@ ac2 - komputer podpowiada przy nietrafionych liczbach
 Typ: Bug
 Story points: 1
 
-4) Rozszerzenie przedzialu do dowolnej liczby
+4) Nowa gra - zamiana liczby z wybranego systemu na inny 
+Typ: Story
+Story Points:
+ac1 - podana liczba i dwa systemy liczbowe. Liczba jest podana w jednym z systemow liczbowych. Gracz musi poprawnie podac liczbe w nowym systemie.
+ac2 - mozliwosc podania przez gracza systemow liczbowych.
+ac3 - mozliwosc wybrania przez gracza czy bedzie zgadywac liczbe czy wybierze odpowiedz testowa
+
+5) Losowanie pytan w starych grach
+Typ: Story
+Story points:
+ac1 - Mozliwosc wybrania trybu gry. Czy pytania/cystaty ida po kolei z pliku czy beda losowane.
+
+6) Cytaty poiwnny byc w ramkach
+Typ: Story
+Story Points:
+ac1 - kazdy wystwietlony cytat powinien byc w ramce.
+
+7) Rozszerzenie przedzialu do dowolnej liczby
 Typ: Story
 Story points: 
 
-
-4) Historia gier + ranking 
+8) Historia gier + ranking 
 Typ: Story 
 Story points:
 
-5) Nowa gra - tlumaczenia 
+9) Nowa gra - tlumaczenia 
 Typ: Story
 Story points:
