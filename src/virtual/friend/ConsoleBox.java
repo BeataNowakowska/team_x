@@ -1,4 +1,4 @@
-﻿package virtual.friend;
+package virtual.friend;
 
 import java.io.BufferedReader;
 import java.io.IOException;
