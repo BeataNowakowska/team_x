@@ -33,7 +33,8 @@ public class FriendUITest {
 		quotesPrinter.setDataArrays(quotasArrayList);
 		puzzlesPrinter = new PuzzlesPrinter(systemConsole);
 		scienceTestPrinter = new ScienceTestPrinter(systemConsole);
-		friend = new FriendUI(systemConsole, basicFunctionality, quotesPrinter, scienceTestPrinter, puzzlesPrinter);
+		//todo fix test
+		friend = new FriendUI(systemConsole, basicFunctionality, quotesPrinter, scienceTestPrinter, puzzlesPrinter, null);
 	}
 
 	@Test
