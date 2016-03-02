@@ -15,10 +15,10 @@ public class FriendDataCoderTest {
 	
 	public String dataCoder() throws IOException {
 		
-		List<String> quotes = Files.readAllLines(Paths.get("F:\\BrassWillow\\PST\\PSD\\GIT\\team_x\\team_x\\exampleData\\quotes.txt"));
-		List<String> questions = Files.readAllLines(Paths.get("F:\\BrassWillow\\PST\\PSD\\GIT\\team_x\\team_x\\exampleData\\questions.txt"));
-		List<String> sciencequestions = Files.readAllLines(Paths.get("F:\\BrassWillow\\PST\\PSD\\GIT\\team_x\\team_x\\exampleData\\sciencequestions.txt"));
-		List<String> puzzles = Files.readAllLines(Paths.get("F:\\BrassWillow\\PST\\PSD\\GIT\\team_x\\team_x\\exampleData\\puzzles.txt"));
+		List<String> quotes = Files.readAllLines(Paths.get("exampleData\\quotes.txt"));
+		List<String> questions = Files.readAllLines(Paths.get("exampleData\\questions.txt"));
+		List<String> sciencequestions = Files.readAllLines(Paths.get("exampleData\\sciencequestions.txt"));
+		List<String> puzzles = Files.readAllLines(Paths.get("exampleData\\puzzles.txt"));
 		
 		
 		String resultBeforeCoding = "";

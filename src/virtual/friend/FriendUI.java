@@ -1,4 +1,4 @@
-﻿package virtual.friend;
+package virtual.friend;
 
     public class FriendUI
     {

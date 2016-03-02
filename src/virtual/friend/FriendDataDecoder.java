@@ -26,13 +26,12 @@ public class FriendDataDecoder {
 		puzzles = new ArrayList<String []>();
 		
 		for (int i = 0; i < words.length; i++) {
-			// Stupid but works
-			if (i % 4 == 0) {
+			if ('C' == words[i].charAt(0)) {
 				int indexOfLastDot = words[i].lastIndexOf('.');
 				quotes.add(new String [] {words[i].substring(1, indexOfLastDot),words[i].substring(indexOfLastDot+1).trim()});
-			} else if (i % 4 == 1) {
+			} else if ('U' == words[i].charAt(0) || 'A' == words[i].charAt(0)) {
 				questions.add(words[i].substring(1, words[i].length()));
-			} else if (i % 4 == 2) {
+			} else if ('Q' == words[i].charAt(0) || 'S' == words[i].charAt(0)) {
 				String [] partsOfQuestions = words[i].split("\\?");
 				String [] possibleAnswers = partsOfQuestions[1].split("\\,");
  				String [] result = new String[possibleAnswers.length + 2];
@@ -42,7 +41,7 @@ public class FriendDataDecoder {
  					result[j+1] = possibleAnswers[j];
  				}
  				scienceTest.add(result);
-			} else {
+			} else if ('P' == words[i].charAt(0)) {
 				String [] result = words[i].split("\\?");
 				result[0] = result[0].substring(1, result[0].length()) + "?";
 				result[1] = result[1].trim();

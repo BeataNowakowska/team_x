@@ -1,4 +1,4 @@
-﻿package virtual.friend;
+package virtual.friend;
 
 import java.io.IOException;
 import java.nio.file.Files;
