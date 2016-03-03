@@ -9,7 +9,8 @@ package virtual.friend;
             "e - excersize your brain,\n"+
             "p - for puzzles,\n"+
             "s - for science questions,\n"+
-            "n - guess number\n"+
+            "n - guess number \n"+
+            "m - convert binary to decimal \n"+
             "h - display this help,\n"+
             "q - if you want me to leave.\n"+
             "And press Enter\n";
@@ -26,8 +27,9 @@ package virtual.friend;
         ScienceTestPrinter scienceTestPrinter;
         PuzzlesPrinter puzzlesPrinter;
         GuessNumberPrinter guessNumberPrinter;
+        NumberConvertionPrinter numberConvertionPrinter;
 
-        public FriendUI(ConsoleBox console, QuestionsPrinter askMeSomethingChooser, QuotesPrinter quotesPrinter, ScienceTestPrinter scienceTestPrinter, PuzzlesPrinter puzzlesPrinter, GuessNumberPrinter guessNumberPrinter)
+        public FriendUI(ConsoleBox console, QuestionsPrinter askMeSomethingChooser, QuotesPrinter quotesPrinter, ScienceTestPrinter scienceTestPrinter, PuzzlesPrinter puzzlesPrinter, GuessNumberPrinter guessNumberPrinter, NumberConvertionPrinter numberConvertionPrinter)
         {
             this.console = console;
             this.quotesPrinter = quotesPrinter;
@@ -35,6 +37,7 @@ package virtual.friend;
             this.scienceTestPrinter = scienceTestPrinter;
             this.puzzlesPrinter = puzzlesPrinter;
             this.guessNumberPrinter = guessNumberPrinter;
+            this.numberConvertionPrinter = numberConvertionPrinter;
         }
 
         public void run()
@@ -64,6 +67,9 @@ package virtual.friend;
                         break;
                     case "n":
                         guessNumberPrinter.next();
+                        break;
+                    case "m":
+                        numberConvertionPrinter.next();
                         break;
                     case "h":
                         console.write(HELP);

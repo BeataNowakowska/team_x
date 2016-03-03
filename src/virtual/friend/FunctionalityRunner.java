@@ -46,5 +46,6 @@ public abstract class FunctionalityRunner {
 	public void setDataArrays(ArrayList<String []> list){
 		arrayData = list;
 	};
-	
+
+
 }

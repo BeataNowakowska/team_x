@@ -34,7 +34,7 @@ public class FriendUITest {
 		puzzlesPrinter = new PuzzlesPrinter(systemConsole);
 		scienceTestPrinter = new ScienceTestPrinter(systemConsole);
 		//todo fix test
-		friend = new FriendUI(systemConsole, basicFunctionality, quotesPrinter, scienceTestPrinter, puzzlesPrinter, null);
+		friend = new FriendUI(systemConsole, basicFunctionality, quotesPrinter, scienceTestPrinter, puzzlesPrinter, null, null);
 	}
 
 	@Test
