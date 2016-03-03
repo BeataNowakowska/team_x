@@ -12,9 +12,16 @@ public class NumberConvertionPrinter extends FunctionalityRunner {
 
     int randomNumber = 0;
     String convertedRandomNumber;
+    RandomNumberGenerator numberGenerator;
 
     public NumberConvertionPrinter(ConsoleBox box) {
         super(box);
+        this.numberGenerator = new RandomNumberGenerator();
+    }
+
+    public NumberConvertionPrinter(ConsoleBox box, RandomNumberGenerator numberGenerator) {
+        super(box);
+        this.numberGenerator = numberGenerator;
     }
 
     @Override
@@ -40,8 +47,7 @@ public class NumberConvertionPrinter extends FunctionalityRunner {
     }
 
     protected int generateRandomNumber(){
-        Random random = new Random();
-        randomNumber = random.nextInt(100);
+        randomNumber = numberGenerator.generateRandomNumber();
         return randomNumber;
     }
 

@@ -14,16 +14,14 @@ import org.junit.Test;
 public class NumberConvertionPrinterTest  {
 
     SystemConsoleStub stub;
+    RandomNumberStub numberGenerator;
     NumberConvertionPrinter numberConvertionPrinter;
 
     @Before
     public void before(){
         stub = new SystemConsoleStub();
-        numberConvertionPrinter = new NumberConvertionPrinter(stub) {
-            protected int generateRandomNumber() {
-                return 23;
-            }
-        };
+        numberGenerator = new RandomNumberStub(23);
+        numberConvertionPrinter = new NumberConvertionPrinter(stub, numberGenerator);
     }
 
     @Test
